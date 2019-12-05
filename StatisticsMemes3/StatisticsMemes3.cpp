@@ -364,7 +364,6 @@ auto hiSquaredTest(const vector<T>& values, const distributionFunction& f)
 		const auto pk = (f(copy[copy.size() * (i + 1) / length]) - f(copy[copy.size() * i / length])) * copy.size();
 		hiSquared += pow(copy.size() / length - pk, 2) / pk;		
 	}
-	cout << hiSquared << endl;
 	return hiSquared < approximateChiSquareQuantile(0.95, length - 1);
 }
 
